@@ -1,0 +1,11 @@
+USE SoftUni
+GO
+
+SET ROWCOUNT 5
+SELECT
+	*
+FROM
+	Employees e
+ORDER BY
+	e.Salary
+	DESC
