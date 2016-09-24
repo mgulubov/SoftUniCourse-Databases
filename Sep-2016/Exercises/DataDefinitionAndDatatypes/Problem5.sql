@@ -1,0 +1,6 @@
+USE Minions
+GO
+
+TRUNCATE TABLE
+	Minions
+GO

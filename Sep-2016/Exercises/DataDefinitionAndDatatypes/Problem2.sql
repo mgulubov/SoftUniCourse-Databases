@@ -1,0 +1,28 @@
+USE Minions
+GO
+
+-- Drop tables if exist
+DROP TABLE IF EXISTS
+	Minions
+GO
+
+DROP TABLE IF EXISTS
+	Towns
+GO	
+
+-- Create tables
+CREATE TABLE 
+	Minions(
+		Id INT NOT NULL IDENTITY PRIMARY KEY,
+		Name NVARCHAR(250) NOT NULL,
+		Age INT
+	)
+GO
+
+CREATE TABLE
+	Towns(
+		Id INT NOT NULL IDENTITY PRIMARY KEY,
+		Name NVARCHAR(250) NOT NULL
+	)
+GO
+
