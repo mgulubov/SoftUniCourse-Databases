@@ -1,4 +1,4 @@
-USE master
+USE Bank
 GO
 ------------
 ------------
@@ -20,12 +20,12 @@ BEGIN
 
 BEGIN TRANSACTION WithdrawMoneyTransaction
 
-UPDATE
-	Accounts
-SET
-	Balance = Balance - @moneyAmount
-WHERE
-	Id = @AccountId
+	UPDATE
+		Accounts
+	SET
+		Balance = Balance - @moneyAmount
+	WHERE
+		Id = @AccountId
 
 COMMIT TRANSACTION WithdrawMoneyTransaction
 
@@ -37,3 +37,5 @@ GO
 DROP PROCEDURE IF EXISTS
 	usp_WithdrawMoney
 GO
+------------
+------------

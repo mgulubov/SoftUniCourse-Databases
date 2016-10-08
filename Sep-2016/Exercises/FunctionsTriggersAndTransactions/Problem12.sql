@@ -1,4 +1,4 @@
-USE master
+USE Bank
 GO
 ------------
 ------------
@@ -36,8 +36,6 @@ GO
 ------------
 ------------
 -- Create procedure
--- AccountHolders(Id (PK), FirstName, LastName, SSN)
--- Accounts(Id (PK), AccountHolderId (FK), Balance).  
 CREATE PROCEDURE
 	usp_CalculateFutureValueForAccount
 		@AccountId INT,
@@ -71,3 +69,5 @@ GO
 DROP PROCEDURE IF EXISTS
 	usp_CalculateFutureValueForAccount
 GO
+------------
+------------

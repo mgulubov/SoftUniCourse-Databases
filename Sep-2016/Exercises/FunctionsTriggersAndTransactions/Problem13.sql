@@ -1,4 +1,4 @@
-USE master
+USE Bank
 GO
 ------------
 ------------
@@ -9,8 +9,6 @@ GO
 ------------
 ------------
 -- Create procedure
--- AccountHolders(Id (PK), FirstName, LastName, SSN)
--- Accounts(Id (PK), AccountHolderId (FK), Balance).
 CREATE PROCEDURE
 	usp_DepositMoney
 		@AccountId INT,
@@ -20,12 +18,12 @@ BEGIN
 
 BEGIN TRANSACTION DepositMoneyTransaction
 
-UPDATE
-	Accounts
-SET
-	Balance = Balance + @moneyAmount
-WHERE
-	Id = @AccountId
+	UPDATE
+		Accounts
+	SET
+		Balance = Balance + @moneyAmount
+	WHERE
+		Id = @AccountId
 
 COMMIT TRANSACTION DepositMoneyTransaction
 
@@ -37,3 +35,5 @@ GO
 DROP PROCEDURE IF EXISTS
 	usp_DepositMoney
 GO
+------------
+------------

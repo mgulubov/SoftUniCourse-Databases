@@ -1,4 +1,5 @@
-USE master
+USE Bank
+GO
 ---------------
 ---------------
 -- Drop function if exists
@@ -37,3 +38,5 @@ GO
 DROP FUNCTION IF EXISTS
 	ufn_CalculateFutureValue
 GO
+---------------
+---------------
