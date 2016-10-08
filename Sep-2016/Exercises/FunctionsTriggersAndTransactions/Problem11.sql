@@ -1,9 +1,13 @@
 USE master
-
+---------------
+---------------
+-- Drop function if exists
 DROP FUNCTION IF EXISTS
 	ufn_CalculateFutureValue
 GO
-
+---------------
+---------------
+-- Create function
 CREATE FUNCTION
 	ufn_CalculateFutureValue(
 		@Sum MONEY,
@@ -22,10 +26,14 @@ RETURN
 
 END
 GO
-
+---------------
+---------------
+-- Call function
 SELECT dbo.ufn_CalculateFutureValue(1000, 0.1, 5)
 GO
-
+---------------
+---------------
+-- Drop function if exists
 DROP FUNCTION IF EXISTS
 	ufn_CalculateFutureValue
 GO
